@@ -61,7 +61,7 @@ with gr.Blocks(title="8086 Stepper Motor Agentic AI Lab Tutor", theme=gr.themes.
         data_port = gr.Textbox(value="DATA_PORT", label="8255 output port symbol/address from your kit")
         control_port = gr.Textbox(value="CONTROL_PORT", label="8255 control port symbol/address from your kit")
         gen_btn = gr.Button("Generate assembly template", variant="primary")
-        code_out = gr.Code(label="8086 assembly template", language="assembly")
+        code_out = gr.Code(label="8086 assembly template", language="text")
         gen_btn.click(make_code, [g_direction, g_mode, g_steps, g_delay, data_port, control_port], code_out)
 
     with gr.Tab("AI Tutor & Debug Helper"):
